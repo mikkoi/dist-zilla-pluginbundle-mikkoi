@@ -60,7 +60,7 @@ sub configure {
             ['Test::MinimumVersion' => {
                     'max_target_perl' => $target_perl,
             }],
-            'CheckExtraTests',
+            # 'CheckExtraTests', We already run RunExtraTests
             'MojibakeTests',
             'Test::NoTabs',
         );
