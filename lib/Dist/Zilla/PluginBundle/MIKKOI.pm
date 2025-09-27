@@ -34,11 +34,9 @@ sub configure {
             'PruneFiles',
             'MinimumPerl',
             'AutoPrereqs',
-            [ 'CPANFile' => {
-                'filename' => 'dzil-generated-cpanfile',
-            }],
             'Test::PodSpelling',
-            'Test::CheckManifest',
+            # 'Test::CheckManifest',
+            'Test::DistManifest', # By Karen Etheridge
             'MetaTests',
             'PodSyntaxTests',
             'PodCoverageTests',
