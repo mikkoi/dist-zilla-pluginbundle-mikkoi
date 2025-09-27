@@ -45,10 +45,11 @@ sub configure {
             'Test::Kwalitee',
             'Test::CPAN::Changes',
             ['Test::Perl::Critic' => {
+                'embed_critic_config' => 1,
                 'critic_config' => '.perlcriticrc',
             }],
             ['Test::EOL' => {
-                'trailing_whitespace' => 1,
+                    'trailing_whitespace' => 1,
             }],
             'Test::UnusedVars',
             'Test::Synopsis',
@@ -62,6 +63,6 @@ sub configure {
             'MojibakeTests',
             'Test::NoTabs',
         );
+    return;
 }
-
 1;

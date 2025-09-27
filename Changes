@@ -1,6 +1,7 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+            * Add trailing whitespace check to Test::EOL.
             * Switch Test::CheckManifest to Test::DistManifest.
             * Clean whitespace.
 
