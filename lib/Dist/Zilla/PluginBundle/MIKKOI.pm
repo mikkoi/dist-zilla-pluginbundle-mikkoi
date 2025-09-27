@@ -2,7 +2,7 @@ package Dist::Zilla::PluginBundle::MIKKOI;
 use strict;
 use warnings;
 
-# VERSION
+our $VERSION = '0.002';
 
 # ABSTRACT: BeLike::MIKKOI when you build your dists
 
@@ -12,20 +12,24 @@ with
     ;
 
 sub configure {
+    ## no critic (ValuesAndExpressions::RequireInterpolationOfMetachars)
     my $self = shift;
     my $target_perl = '5.014';
 
     $self->add_bundle('@Filter', {
             '-bundle' => '@Basic',
             '-remove' => [ 'License', 'ExtraTests', ],
-            '-version' => '5.031',
+            '-version' => '6.032',
         });
-    $self->add_plugins([ 'OurPkgVersion', ]);
-    $self->add_plugins([ 'Git::NextVersion', ]);
+    # $self->add_plugins([ 'Git::NextVersion', ]);
+    $self->add_plugins([ 'RewriteVersion', {
+            'allow_decimal_underscore' => 1,
+        }]);
 
     # NextRelease must be before [@Git](Git::Commit)
     $self->add_plugins([ 'NextRelease', ]);
     $self->add_bundle('@Git');
+    $self->add_plugins([ 'BumpVersionAfterRelease', ]);
 
     $self->add_plugins(
             'MetaJSON',
