@@ -1,6 +1,7 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+            * Define directories for Test::PodSpelling.
             * Add Signature and AuthorSignature Test.
             * Change to not generate version number at release time.
             * Add 'trailing_whitespace' check to Test::EOL.

@@ -38,7 +38,10 @@ sub configure {
             'PruneFiles',
             'MinimumPerl',
             'AutoPrereqs',
-            'Test::PodSpelling',
+            ['Test::PodSpelling' => {
+                    'directories' => ['lib', 'bin', 'script', ],
+                    'stopword' => [ 'env', ],
+            }],
             # 'Test::CheckManifest',
             'Test::DistManifest', # By Karen Etheridge
             'MetaTests',
