@@ -66,6 +66,8 @@ sub configure {
             # 'CheckExtraTests', We already run RunExtraTests
             'MojibakeTests',
             'Test::NoTabs',
+            'Signature',
+            'AuthorSignatureTest',
         );
     return;
 }
