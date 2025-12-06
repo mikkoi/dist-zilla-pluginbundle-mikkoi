@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+0.002     2025-12-06 14:09:25+01:00 Europe/Stockholm
             * Define directories for Test::PodSpelling.
             * Add Signature and AuthorSignature Test.
             * Change to not generate version number at release time.
