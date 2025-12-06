@@ -72,11 +72,13 @@ sub configure {
             'Signature',
             'AuthorSignatureTest',
             ['Test::Software::Policies' => {
-                    'include_policy' => [ 'Contributing', 'CodeOfConduct', 'License', 'Security', ],
+                    'include_policy' => [
+                        'Contributing',
+                        'CodeOfConduct',
+                        'License',
+                        'Security',
+                    ],
             }],
-
-
-
         );
     return;
 }
