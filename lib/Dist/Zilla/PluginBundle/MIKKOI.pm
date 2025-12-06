@@ -2,7 +2,7 @@ package Dist::Zilla::PluginBundle::MIKKOI;
 use strict;
 use warnings;
 
-our $VERSION = '0.002';
+our $VERSION = '0.003';
 
 # ABSTRACT: BeLike::MIKKOI when you build your dists
 
@@ -40,7 +40,7 @@ sub configure {
             'AutoPrereqs',
             ['Test::PodSpelling' => {
                     'directories' => ['lib', 'bin', 'script', ],
-                    'stopword' => [ 'env', ],
+                    'stopword' => [ 'env', 'dotenv', 'envdot', ],
             }],
             # 'Test::CheckManifest',
             'Test::DistManifest', # By Karen Etheridge
