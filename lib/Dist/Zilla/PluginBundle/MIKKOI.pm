@@ -71,6 +71,12 @@ sub configure {
             'Test::NoTabs',
             'Signature',
             'AuthorSignatureTest',
+            ['Test::Software::Policies' => {
+                    'include_policy' => [ 'Contributing', 'CodeOfConduct', 'License', 'Security', ],
+            }],
+
+
+
         );
     return;
 }
