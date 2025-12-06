@@ -19,7 +19,7 @@ sub configure {
     $self->add_bundle('@Filter', {
             '-bundle' => '@Basic',
             '-remove' => [ 'License', 'ExtraTests', ],
-            '-version' => '6.032',
+            '-version' => '6.030',
         });
     # $self->add_plugins([ 'Git::NextVersion', ]);
     $self->add_plugins([ 'RewriteVersion', {
