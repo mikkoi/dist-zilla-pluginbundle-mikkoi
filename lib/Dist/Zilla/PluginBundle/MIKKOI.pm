@@ -71,7 +71,6 @@ sub configure {
             'Test::NoTabs',
             ['Test::Software::Policies' => {
                     'include_policy' => [
-                        'AIDisclosure',
                         'Contributing',
                         'CodeOfConduct',
                         'License',
