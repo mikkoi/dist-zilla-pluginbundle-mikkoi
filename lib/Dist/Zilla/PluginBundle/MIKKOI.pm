@@ -69,8 +69,6 @@ sub configure {
             # 'CheckExtraTests', We already run RunExtraTests
             'MojibakeTests',
             'Test::NoTabs',
-            'Signature',
-            'AuthorSignatureTest',
             ['Test::Software::Policies' => {
                     'include_policy' => [
                         'AIDisclosure',
