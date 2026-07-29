@@ -48,7 +48,10 @@ sub configure {
             'PodSyntaxTests',
             'PodCoverageTests',
             'Test::Portability',
-            'Test::Version',
+            ['Test::Version' => {
+                'is_strict' => 1,
+                'has_version' => 1,
+            }],
             'Test::Kwalitee',
             'Test::CPAN::Changes',
             ['Test::Perl::Critic' => {
